@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
-const program = require("commander");
+const { program } = require("commander");
 const bookcovers = require("./index");
 
 program
-  .arguments("<isbn>")
+  .argument('<isbn>', 'ISBN Number')
   .option("-t, --type <api>", "api to use, defaults to all")
   .action((isbn) => {
     bookcovers
